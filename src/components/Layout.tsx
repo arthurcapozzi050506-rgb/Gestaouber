@@ -61,13 +61,7 @@ export default function Layout() {
               key={item.name}
               to={item.href}
               end={item.href === '/'}
-              className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  isActive
-                    ? 'bg-emerald-500/10 text-emerald-400 border-l-3 border-emerald-400'
-                    : 'text-slate-300 hover:bg-slate-700/50 hover:text-white'
-                }`
-              }
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 text-slate-300 hover:bg-slate-700/50 hover:text-white [&.active]:bg-emerald-500/10 [&.active]:text-emerald-400"
               onClick={() => setSidebarOpen(false)}
             >
               <item.icon className="w-5 h-5" />
